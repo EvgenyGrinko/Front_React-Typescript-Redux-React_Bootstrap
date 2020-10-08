@@ -16,6 +16,7 @@
   border-bottom: 1px solid #dfe5f1 !important;
   padding: 0 !important;
   box-shadow: none !important;
+  background-image: none !important;
 }
 
 .formHelperText {

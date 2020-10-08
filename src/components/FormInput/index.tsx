@@ -28,19 +28,19 @@ const FormInput: FC<IFormInput> = ({
   };
   return (
     <div className={styles.formControl}>
-      <Form.Label className={styles.formLabel}>{label}</Form.Label>
-      <Form.Control
-        type={type}
-        className={styles.formInput}
-        name={name}
-        value={value}
-        required
-        onChange={onInputChange}
-      />
-      <Form.Text className={styles.formHelperText}>{helperText}</Form.Text>
-      <Form.Control.Feedback type="invalid">
-        Please provide a value.
-      </Form.Control.Feedback>
+      <Form.Group>
+        <Form.Label className={styles.formLabel}>{label}</Form.Label>
+        <Form.Control
+          type={type}
+          className={styles.formInput}
+          name={name}
+          value={value}
+          isValid={false}
+          required
+          onChange={onInputChange}
+        />
+        <Form.Text className={styles.formHelperText}>{helperText}</Form.Text>
+      </Form.Group>
     </div>
   );
 };

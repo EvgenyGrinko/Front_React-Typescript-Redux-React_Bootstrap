@@ -2,12 +2,15 @@ import {
   ADD_PERSONAL_DATA_TO_ACCOUNT,
   AGREE_AND_CREATE_ACCOUNT_SUCCESS,
   AGREE_AND_CREATE_ACCOUNT_ERROR,
+  AGREE_AND_CREATE_ACCOUNT,
+  RESET_STATE,
 } from "../constants/index";
 
-const initialState = {
+const INIT_STATE = {
   personalData: {},
   isAccountCreated: false,
   error: "",
+  loading: false,
 };
 
 interface IAction {
@@ -15,29 +18,37 @@ interface IAction {
   payload: object;
 }
 
-function rootReducer(state = initialState, { type, payload }: IAction) {
+function rootReducer(state = INIT_STATE, { type, payload }: IAction) {
   switch (type) {
     case ADD_PERSONAL_DATA_TO_ACCOUNT:
       return {
         ...state,
         personalData: { ...state.personalData, ...payload },
         isAccountCreated: false,
-        error: ''
+        error: "",
+      };
+    case AGREE_AND_CREATE_ACCOUNT:
+      return {
+        ...state,
+        loading: true,
       };
     case AGREE_AND_CREATE_ACCOUNT_SUCCESS:
       return {
         ...state,
         isAccountCreated: payload,
+        loading: false,
       };
     case AGREE_AND_CREATE_ACCOUNT_ERROR:
       return {
         ...state,
         isAccountCreated: false,
-        error: payload 
+        loading: false,
+        error: payload,
       };
+    case RESET_STATE:
+      return INIT_STATE;
     default:
-      return state;
+      return { ...state };
   }
 }
-// export type RootState = ReturnType<typeof rootReducer>
 export default rootReducer;

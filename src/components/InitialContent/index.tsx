@@ -17,6 +17,7 @@ const InitialContent: FC = () => {
           link="/test/personal"
           text="Apply Now"
           moveForward={true}
+          isFormValid={true}
         />
       </Col>
     </Row>

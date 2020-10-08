@@ -42,7 +42,7 @@ label {
 .formLabel {
   font-size: 12px;
   font-weight: 700;
-  color: #6F8086;
+  color: #6f8086;
   margin-bottom: 19px;
 }
 
@@ -88,7 +88,7 @@ label {
   width: 18px;
   height: 18px;
   background-color: #fff;
-  border: 1px solid #6F8086;
+  border: 1px solid #6f8086;
   border-radius: 2px;
 }
 
@@ -117,4 +117,9 @@ label {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.customAlert {
+  font-size: 15px;
+  margin: 10px 0 0 0 !important;
 }

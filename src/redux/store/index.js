@@ -7,8 +7,5 @@ const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );
-// const store: Store<ArticleState, ArticleAction> & {
-//   dispatch: DispatchType
-// } = createStore(rootReducer, applyMiddleware(thunk))
 
 export default store;
