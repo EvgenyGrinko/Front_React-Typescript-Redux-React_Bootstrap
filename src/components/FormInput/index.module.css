@@ -1,0 +1,25 @@
+.formControl {
+  margin-top: 27px;
+}
+
+.formLabel {
+  font-size: 12px;
+  font-weight: 700;
+  color: #6f8086;
+}
+
+.formInput {
+  margin-top: 20px;
+  border: none !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-bottom: 1px solid #dfe5f1 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.formHelperText {
+  color: #6f8086;
+  font-size: 12px !important;
+  line-height: 14px !important;
+}

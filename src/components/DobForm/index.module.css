@@ -1,0 +1,16 @@
+.mainPage {
+  height: 100vh;
+}
+
+.header {
+  font-weight: 900;
+  font-size: 32px;
+  margin-top: 105px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.content {
+  font-size: 30px;
+  font-weight: bold;
+}

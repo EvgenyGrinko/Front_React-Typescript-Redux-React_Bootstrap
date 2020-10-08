@@ -1,0 +1,14 @@
+.indicator {
+  height: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0;
+  display: flex;
+}
+
+.indicator__complete {
+  background-color: #2ecfbf;
+}
+
+.indicator__uncomplete {
+  background-color: #979797;
+}
